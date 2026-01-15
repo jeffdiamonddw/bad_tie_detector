@@ -9,7 +9,7 @@ def lambda_handler(event, context = None):
 
     flight = event['flight']
     image_index = event['image_index']
-    if True:#random.random() < .01:
+    if random.random() < .01:
         
         mask_file = "s3://dw-trackview/{}/raster/mask_{}.cog".format(flight, image_index)
         
